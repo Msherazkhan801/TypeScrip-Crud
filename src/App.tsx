@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import  { useState } from 'react';
 import './App.css';
 import List from './component/List/List';
 import Add from './component/Add';
 
-interface IState{
+export interface IState{
   people:{
     
       name:string,
@@ -24,7 +23,7 @@ function App() {
     <div className="App">
       <h1>Invite People</h1>
       <List people={people}/>
-      <Add/>
+      <Add people={people} setPeople={setPeople}/>
      
     </div>
   );
